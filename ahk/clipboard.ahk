@@ -20,7 +20,7 @@ bin := ClipboardAll
 n := 0
 while format := NumGet(bin, n, "uint")
 {
-    size := NumGet(bin, n + 4, "uint")
+    size := NumGet(bin, n + 4 "uint")
     if (format = CF_HTML)
     {
         html := StrGet(&bin + n + 8, size, "UTF-8")
@@ -32,7 +32,8 @@ while format := NumGet(bin, n, "uint")
 if !sourceURL
     return
 Clipboard := bin
-Clipboard := Clipboard "`n" sourceURL
+; Clipboard := Clipboard "`n" sourceURL
+Clipboard := "[" Clipboard "](" sourceURL ")"
 Send ^v
 Sleep 250
 Clipboard := bin

@@ -8,7 +8,7 @@
 
 ; =======================================================================================================
 ; alt a-z / mainly for task switch and frequently used function
-!a::Run, %ComSpec% /k code D:\projects\ahk ,, hide
+!a::Run, %ComSpec% /k code C:\Users\Leeld\Documents\projects\wToolbox ,, hide
 !b::Run, www.baidu.com/s?ie=UTF-8&wd=%Clipboard%
 !c::Switch("clion64.exe", false, "")
 ; !d shortcuts for browsers input bar
@@ -24,7 +24,7 @@
 !n::Switch("onenote.exe", false, "")
 ; !o for onetab
 !p::Switch("pycharm64.exe", false, "")
-; !q::freehotkey
+; !q::for tim
 !r::Run, C:\Users\Leeld\Documents\projects\wToolbox\main.ahk
 !s::Switch("datagrip64.exe", false, "")
 !t::Switch("typora.exe", false, "")
@@ -38,6 +38,10 @@
     Send +{TAB}
 !y::Switch("webstorm64.exe", false, "")
 ; !z::freehotkey
+
+; ======================================================================================================
+; ctrl alt
+^!n::Run, %ComSpec% /k code C:\Users\Leeld\Documents\projects\cheatsheets,, hide
 
 
 ; ======================================================================================================
